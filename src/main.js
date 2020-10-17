@@ -9,7 +9,10 @@ import './assets/fonts/iconfont.css'
 import './assets/css/gloabal.css'
 // 导入axios
 import axios from 'axios'
+// 导入第三方表格依赖
+import ZkTable from 'vue-table-with-tree-grid'
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+Vue.component('tree-table', ZkTable)
 // 请求拦截
 axios.interceptors.request.use(config => {
   // 设置请求头，除了登录接口外其他接口都要带上
