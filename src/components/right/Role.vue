@@ -307,7 +307,6 @@ export default {
         return this.$message.info('已取消删除')
       }
       const { data: res } = await this.$http.delete(`roles/${id}`)
-      console.log(res)
       if (res.meta.status !== 200) {
         return this.$message.error('删除角色失败')
       }
@@ -337,7 +336,6 @@ export default {
       //   this.roleList = res.data
       // 返回最新的角色信息
       role.children = res.data
-      console.log(role)
       this.$message.success('删除权限成功')
       //   this.roleList = res.data
     },
